@@ -4,8 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Tracker</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- TailwindDasiy -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="./scrift/tailwind.css">
+    <style>
+        *{
+           font-family: "Outfit", sans-serif;
+        }
+    </style>
 </head>
-<body>
-    
+<body  class="bg-[#E6E7E9]">
+  <h1 class="font-bold text-2xl py-4">Job Application Tracker</h1>
+  <section id="header" class="mt-8 ">
+    <div class="grid grid-cols-3 gap-10 mx-auto">
+        <div id="header-card" class=" border rounded-[5px] bg-white px-4">
+            <h2 class="font-bold ">Total</h2>
+            <p>8</p>
+        </div>
+        <div class=" border rounded-[5px]  bg-white px-4">
+            <h2 class="font-bold ">Interview</h2>
+            <P>0</P>
+        </div>
+        <div class=" border rounded-[5px] bg-white  px-4">
+            <h2 class="font-bold ">Reject</h2>
+            <p>0</p>
+        </div>
+    </div>
+  </section>
+  <section class="grid grid-cols-2 justify-between py-5">
+    <div class="">
+        <h2 class="font-bold text-2xl">Available Job</h2>
+    </div>
+    <diV class="text-right px-6">
+        <p>8</p>
+    </diV>
+  </section>
+  <section>
+    <button class="btn">All</button>
+    <button class="btn">Interview</button>
+    <button class="btn">Rejected</button>
+  </section>
+  <section class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+    <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section  class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section class="my-10 border  bg-white rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2 >Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+    </div>
+  </section>
+  <section  class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8">
+    <div class="p-4 space-y-4">
+        <h2>Mobile First Corp</h2>
+        <p>React Native Developer</p>
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+        <button class="btn">Not Applied</button>
+        <P>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
+        <diV>
+            <button class="btn bg-white text-green-400">Interview</button>
+            <button class="btn bg-white text-red-400">Reject</button>
+        </diV>
+    </div>
+    <div>
+
+    </div>
+  </section>
+  <script src="./scrift/tailwind.config.js"></script>
 </body>
 </html>
