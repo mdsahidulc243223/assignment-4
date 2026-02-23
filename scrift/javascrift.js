@@ -76,7 +76,7 @@ for(let thrive of interviewList){
         <h2 class=" company font-bold text-xl">${Interview.company}</h2>
         <p class="position">React Native Developer</p>
         <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
-        <button class=" type btn">Not Applied</button>
+        <button class=" type btn">${</button>
         <P class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
         <diV>
             <button id="mobile-first-corp-btn-interview" class="btn-1 bg-white text-green-400">Interview</button>
