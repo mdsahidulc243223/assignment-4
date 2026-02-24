@@ -35,8 +35,7 @@ function toggleStyle(id){
  else if(id==="All"){
      allcardCount.classList.remove('hidden')
     filteredSection.classList.add('hidden');
- }
- else if(id==="Reject"){
+ } else if(id==="Reject"){
      allcardCount.classList.add('hidden')
     filteredSection.classList.remove('hidden');
  }
@@ -69,6 +68,7 @@ if(!companyExist){
 // interviewList=interviewList.filter(item=> item.companyName !==cardInfo.companyName);
 calculateCount();
 renderTriving();
+}
 else if(event.target.classList.contains('btn-2')){    
 const parentnode=event.target.parentNode.parentNode;
 const companyName= parentnode.querySelector('.company').innerText;

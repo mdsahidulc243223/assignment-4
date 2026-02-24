@@ -9,7 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- TailwindDasiy -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +39,7 @@
         </div>
     </div>
   </section>
-  <section class="grid grid-cols-2 justify-between py-5 w-[1110px] mx-auto">
+  <section class="grid grid-cols-2 justify-between py-5 w-full md:w-[1110px] mx-auto">
     <div class="">
         <h2 class="font-bold text-2xl">Available Job</h2>
     </div>
@@ -48,7 +47,7 @@
         <p>0</p>
     </diV>
   </section>
-  <section class="w-[1110px] mx-auto">
+  <section class="md:w-[1110px] mx-auto">
     <button onclick="toggleStyle('All')" id="All" class="btn bg-black text-white ">All</button>
     <button onclick="toggleStyle('Interview')" id="Interview" class="btn">Interview</button>
     <button onclick="toggleStyle('Reject')" id="Reject" class="btn">Rejected</button>
@@ -57,17 +56,13 @@
  <section id="filtered-section" class="hidden">
 
  </section>
-
-
-
-
   <!-- <section  id="no-job" class=" border bg-white w-[1110px] h-[498px] rounded-[6px] mx-auto mt-10 flex flex-col justify-center items-center">
     <div class="flex flex-col justify-center items-center text-center">
         <img src="./jobs.png">
         <h2 class="font-bold text-2xl">No Job Available</h2>
         <p>Check back soon for new job opportunities</p>
     </div> -->
-  </section>
+  <!-- </section> -->
   <section id="job">
   <section id="mobile-first-corp" class="my-10 border bg-white  rounded-[6px] flex justify-between gap-8 md:w-[1110px] mx-auto">
     <div class="p-4 space-y-4">
@@ -75,11 +70,11 @@
         <p class="position">React Native Developer</p>
         <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
         <button class=" type btn">Not Applied</button>
-        <P class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
-        <diV>
+        <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+        <div>
             <button id="mobile-first-corp-btn-interview" class="btn-1 btn bg-white text-green-400">Interview</button>
             <button id="mobile-first-corp-btn-rejected" class="btn-2 btn bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -91,11 +86,11 @@
         <p class="position">Web Designer & Developer</p>
         <p class="salary">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
         <button class="type  btn">Not Applied</button>
-        <P class="description">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
-        <diV>
+        <p class="description">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+        <div>
             <button id="webflow-agency-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="webflow-agency-rejected" class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
     <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -107,11 +102,11 @@
         <p class="position">Data Visualization Specialist</p>
         <p class="salary">Boston, MA • Full-time • $125,000 - $165,000</p>
         <button class="type btn">Not Applied</button>
-        <P class="description">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</P>
-        <diV>
+        <p class="description">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+        <div>
             <button id="dataviz-solution-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="dataviz-solution-btn-rejected"  class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -123,11 +118,11 @@
         <p class="position">Backend Developer</p>
         <p class="salary">Seattle, WA • Full-time • $140,000 - $190,000</p>
         <button class=" type btn">Not Applied</button>
-        <P class="description">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</P>
-        <diV>
+        <p class="description">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+        <div>
             <button id="cloudfirst-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="cloudfirst-btn-rejected" class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -139,12 +134,12 @@
         <p class="position">UI/UX Engineer</p>
         <p class="salary">Austin, TX • Full-time • $110,000 - $150,000</p>
         <button class="type btn">Not Applied</button>
-        <P class="description>Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</P>
+        <p class="description">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
        <div>
             <button id="innovation-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             
             <button id="innovation-btn-rejected" class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -154,13 +149,13 @@
     <div class="p-4 space-y-4">
         <h2 class="company font-bold text-xl">MegaCorp Solutions</h2>
         <p class="position">JavaScript Developer</p>
-        <p class="salary">New York, NY • Full-time • $130,000 - $170,00</p>
+        <p class="salary">New York, NY • Full-time • $130,000 - $170,000</p>
         <button class=" type btn">Not Applied</button>
-        <P class="description">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</P>
-        <diV>
+        <p class="description">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+        <div>
             <button id="megaCorp-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="megaCorp-btn-rejected" class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -172,11 +167,11 @@
         <p class="position">Full Stack Engineer</p>
         <p class="salary">Remote • Full-time • $120,000 - $160,000</p>
         <button class="type btn">Not Applied</button>
-        <P class="description">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</P>
-        <diV>
+        <p class="description">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+        <div>
             <button id="StartupXYZ-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="StartupXYZ-btn-rejected"  class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
          <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
@@ -188,11 +183,11 @@
         <p class="position">React Native Developer</p>
         <p class="salary">Remote • Full-time • $130,000 - $175,000</p>
         <button class="type btn">Not Applied</button>
-        <P class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</P>
-        <diV>
+        <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+        <div>
             <button id="TechCorp-industries-btn-interview" class="btn btn-1 bg-white text-green-400">Interview</button>
             <button id="TechCorp-industries-btn-rejected" class="btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
 
