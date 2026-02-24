@@ -1,10 +1,11 @@
 let interviewList=[]
 let rejectList=[]
-let currentStatues = 'all'
+let currentStatues = 'All'
 let total=document.getElementById("total");
 let interview=document.getElementById("interview");
 let rejected=document.getElementById("rejected");
 const allcardCount=document.getElementById("job");
+const noJob=document.getElementById("no-job");
 const allBtn=document.getElementById("All");
 const interviewBtn=document.getElementById("Interview");
 const rejectedBtn=document.getElementById("Reject");
@@ -15,6 +16,8 @@ function calculateCount(){
     total.innerText=allcardCount.children.length;
     interview.innerText=interviewList.length;
     rejected.innerText=rejectList.length;
+    const job=interviewList.length+rejectList.length;
+    Job.innerText=job;
 
 }
 calculateCount();
@@ -33,14 +36,28 @@ function toggleStyle(id){
  if(id==='Interview'){
     allcardCount.classList.add('hidden')
     filteredSection.classList.remove('hidden');
+     renderTriving(); 
+     if(interviewList.length===0){
+        noJob.classList.remove('hidden')
+     }else{
+        noJob.classList.add('hidden')
+     }
  }
  else if(id==="All"){
      allcardCount.classList.remove('hidden')
     filteredSection.classList.add('hidden');
+    noJob.classList.add('hidden')
  } else if(id==="Reject"){
      allcardCount.classList.add('hidden')
     filteredSection.classList.remove('hidden');
+     renderrejected();
+      if(rejectList.length===0){
+        noJob.classList.remove('hidden')
+     }else{
+        noJob.classList.add('hidden')
+     }
  }
+
 }
 document.addEventListener('click',function(event){
 if(event.target.classList.contains('btn-1')){    
@@ -66,13 +83,13 @@ const companyExist=interviewList.find(item=> item.companyName===cardInfo.company
 
 if(!companyExist){
    interviewList.push(cardInfo); 
+   noJob.classList.add('hidden');
 }
 rejectList=rejectList.filter(item=> item.companyName !==cardInfo.companyName);
-calculateCount();
 if(currentStatues==="Interview"){
 renderTriving();
 }
-
+calculateCount();
 }
 else if(event.target.classList.contains('btn-2')){    
 const parentnode=event.target.parentNode.parentNode;
@@ -97,13 +114,31 @@ const companyExist=rejectList.find(item=> item.companyName===cardInfo.companyNam
 
 if(!companyExist){
    rejectList.push(cardInfo); 
+   noJob.classList.add('hidden'); 
 }
 interviewList=interviewList.filter(item=> item.companyName !==cardInfo.companyName);
-calculateCount();
 if(currentStatues==="Reject"){
       renderrejected();
 }
-
+calculateCount();
+}
+else if(event.target.classList.contains('delete-btn')){
+    const parentnode = event.target.parentNode.parentNode;
+    const companyName = parentnode.querySelector('.company').innerText;
+    parentnode.remove();
+    interviewList = interviewList.filter(
+        item => item.companyName !== companyName
+    );
+    rejectList = rejectList.filter(
+        item => item.companyName !== companyName
+    );
+    calculateCount();
+    if(currentStatus === "Interview"){
+        renderTriving();
+    }
+    else if(currentStatus === "Reject"){
+        renderrejected();
+    }
 }
 });
 function renderTriving(){
@@ -117,18 +152,23 @@ for(let thrive of interviewList){
         <p class="position">${thrive.position}</p>
         <p class="salary">${thrive.salary}</p>
         <button class=" type btn">${thrive.type}</button>
-        <P class="description">${thrive.description}</P>
-        <diV>
+        <p class="description">${thrive.description}</p>
+        <div>
             <button id="mobile-first-corp-btn-interview" class=" btn btn-1 bg-white text-green-400">Interview</button>
             <button id="mobile-first-corp-btn-rejected" class=" btn btn-2 bg-white text-red-400">Reject</button>
-        </diV>
+        </div>
     </div>
     <div>
-         <img src="./delete-bin.svg" class="w-5 mt-4 mx-4 text-right">
+         <img src="./delete-bin.svg" class="delete-btn w-5 mt-4 mx-4 cursor-pointer hover:scale-110">
     </div>
     `
     filteredSection.appendChild(div);
 }
+ if(interviewList.length===0){
+        noJob.classList.remove('hidden')
+     }else{
+        noJob.classList.add('hidden')
+     }
 }
 function renderrejected(){
 filteredSection.innerHTML=''
@@ -153,4 +193,9 @@ for(let reject of rejectList){
     `
     filteredSection.appendChild(div);
 }
+ if(rejectList.length===0){
+        noJob.classList.remove('hidden')
+     }else{
+        noJob.classList.add('hidden')
+     }
 }
