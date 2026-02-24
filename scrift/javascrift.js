@@ -66,8 +66,9 @@ const companyExist=interviewList.find(item=> item.companyName===cardInfo.company
 if(!companyExist){
    interviewList.push(cardInfo); 
 }
-interviewList=interviewList.filter(item=> item.companyName !==cardInfo.companyName);
+// interviewList=interviewList.filter(item=> item.companyName !==cardInfo.companyName);
 calculateCount();
+renderTriving();
 else if(event.target.classList.contains('btn-2')){    
 const parentnode=event.target.parentNode.parentNode;
 const companyName= parentnode.querySelector('.company').innerText;
@@ -92,7 +93,7 @@ const companyExist=rejectList.find(item=> item.companyName===cardInfo.companyNam
 if(!companyExist){
    rejectList.push(cardInfo); 
 }
-rejectList=rejectList.filter(item=> item.companyName !==cardInfo.companyName);
+// rejectList=rejectList.filter(item=> item.companyName !==cardInfo.companyName);
 calculateCount();
  renderrejected();}
 });
